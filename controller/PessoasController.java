@@ -37,7 +37,9 @@ public class PessoasController {
 	public ResponseEntity<Optional<Pessoas>> getAllById(@PathVariable("Id") int id){
 		Optional<Pessoas> listId = dao.findById(id);
 		
-		if(listId.isEmpty()) { return ResponseEntity.status(404).build(); }
+		if(listId.isEmpty()) { 
+			return ResponseEntity.status(404).build(); 
+		}
 		
 		return ResponseEntity.ok(listId);
 	}

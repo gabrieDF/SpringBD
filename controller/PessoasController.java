@@ -41,10 +41,4 @@ public class PessoasController {
 		
 		return ResponseEntity.ok(listId);
 	}
-	
-	@PostMapping("/Pessoas/add/")
-	public Pessoas getSave(@RequestBody Pessoas pessoa) {
-		return dao.save(pessoa);
-	}
-	
 }
